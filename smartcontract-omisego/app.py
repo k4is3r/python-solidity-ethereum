@@ -19,4 +19,6 @@ print(contract)
 
 #getting the total suply of the coin OmiseGo
 totalSupply = contract.functions.totalSupply().call()
-print(totalSupply)
+print(web3.fromWei(totalSupply, 'ether'))
+print(contract.functions.name().call())
+print(contract.functions.symbol().call())
