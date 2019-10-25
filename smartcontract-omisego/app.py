@@ -22,3 +22,12 @@ totalSupply = contract.functions.totalSupply().call()
 print(web3.fromWei(totalSupply, 'ether'))
 print(contract.functions.name().call())
 print(contract.functions.symbol().call())
+
+#getting the top 3 most account 
+print("The top 3 account")
+bal1 = contract.functions.balanceOf(web3.toChecksumAddress('0x2551d2357c8da54b7d330917e0e769d33f1f5b93')).call()
+bal_2 = contract.functions.balanceOf(web3.toChecksumAddress('0xd26114cd6EE289AccF82350c8d8487fedB8A0C07')).call()
+bal_3 = contract.functions.balanceOf(web3.toChecksumAddress('0x66f820a414680b5bcda5eeca5dea238543f42054')).call()
+print(web3.fromWei(bal1, 'ether'))
+print(web3.fromWei(bal_2, 'ether'))
+print(web3.fromWei(bal_3, 'ether'))
