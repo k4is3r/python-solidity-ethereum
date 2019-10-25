@@ -16,3 +16,7 @@ address = "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"
 
 contract = web3.eth.contract(address=address, abi=abi)
 print(contract)
+
+#getting the total suply of the coin OmiseGo
+totalSupply = contract.functions.totalSupply().call()
+print(totalSupply)
